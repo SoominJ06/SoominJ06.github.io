@@ -135,7 +135,7 @@ const skills = [
     },
     {
         name: "Tomcat",
-        imgUrl: "Tomcat.png",
+        imgUrl: "tomcat.png",
         category: ["Server", "Web"],
     },
     {

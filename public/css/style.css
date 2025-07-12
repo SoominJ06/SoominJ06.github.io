@@ -20,12 +20,13 @@
 }
 
 .title {
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .section_title {
     color: var(--primary);
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .hoverable_btn:hover {
@@ -325,6 +326,7 @@
 
 .awards_award_title {
     font-size: 30px;
+    font-weight: 600;
 }
 
 .awards_award_details {

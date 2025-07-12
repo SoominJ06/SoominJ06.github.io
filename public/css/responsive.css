@@ -1,0 +1,476 @@
+@media screen and (max-width: 1500px) {
+    .projects_project_list {
+        gap: 20px;
+    }
+    
+    .projects_project_title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .section_wrap {
+        gap: 80px;
+    }
+
+    .section {
+        padding: 50px;
+    }
+    
+    /* Profile section */
+    .section_profile {
+        padding: 100px;
+    }
+
+    /* Project section */
+    .section_projects {
+        margin-top: 50px;
+    }
+
+    .projects_project_title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .projects_project_links {
+        gap: 15px;
+    }
+
+    .projects_project_links a {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .projects_project_links p {
+        height: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1070px) {
+    .section_profile {
+        padding: 0 50px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .section_wrap {
+        gap: 100px;
+    }
+    
+    .section:last-child {
+        padding-bottom: 160px;
+    }
+
+    /* Profile section */
+    .section_profile {
+        padding: 0 50px;
+    }
+
+    .section_profile_wrap {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .section_profile_text {
+        align-items: center;
+    }
+
+    .section_profile_resume {
+        margin-top: 30px;
+    }    
+
+    /* Project section */
+    .section_projects {
+        margin-top: 20px;
+    }
+
+    /* Awards section */
+    .awards_award_details {
+        display: grid;
+        grid-template-columns: 45% auto;
+        gap: 30px;
+    }
+
+    .awards_award_desc {
+        gap: 20px;
+    }
+
+    .awards_award_links li {
+        font-size: 16px;
+    }
+
+    .awards_award_links p {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* Awards section */
+    .awards_award_list {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    .awards_award_title {
+        font-size: 25px;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .awards_award_details {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .awards_award_desc {
+        font-size: 18px;
+    }
+
+    .awards_award_img {
+        max-width: 100%;
+    }
+
+    .awards_award_links li {
+        font-size: 18px;
+    }
+
+    .awards_award_links p {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    /* Project section */
+    .section_projects {
+        margin-top: 0;
+    }
+
+    /* Skills section */
+    .skills_skill_list {
+        grid-template-columns: repeat(auto-fill, 20%);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* Profile section */
+    .section_profile_text {
+        font-size: 25px;
+        line-height: 45px;
+    }
+
+    .section_profile_text span {
+        font-size: 40px;
+        line-height: 80px;
+        gap: 5px;
+    }
+
+    .profile_name {
+        font-size: 60px;
+        line-height: 80px;
+    }
+
+    /* Project section */
+    .section_projects_wrap {
+        gap: 50px;
+    }
+
+    .projects_project_list {
+        gap: 100px;
+    }
+
+    .projects_project_title {
+        font-size: 50px;
+        line-height: 55px;
+    }
+
+    .projects_project_links {
+        gap: 20px;
+    }
+
+    .projects_project_links a {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+
+    .projects_project_links p {
+        height: 30px;
+    }
+
+    /* Awards section */
+    .awards_award_list {
+        display: flex;
+        gap: 90px;
+    }
+
+    .awards_award {
+        text-align: center;
+    }
+
+    .awards_award_title {
+        font-size: 35px;
+    }
+
+    .awards_award_desc {
+        align-items: center;
+    }
+
+    .awards_award_desc {
+        font-size: 22px;
+        gap: 30px;
+    }
+
+    /* Skills section */
+    .skills_skill_list {
+        grid-template-columns: repeat(auto-fill, 30%);
+        gap: 20px;
+    }
+
+    .skills_skill {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .skills_skill_details {
+        gap: 20px;
+    }
+
+    .skills_skill_title {
+        position: initial;
+        color: var(--white);
+        opacity: 100;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section:last-child {
+        padding-bottom: 150px;
+    }
+
+    .section_wrap {
+        gap: 40px;
+    }
+
+    /* Projects section */
+    .section_projects {
+        margin-top: 30px;
+    }
+
+    /* Skills section */
+    .skills_skill_list {
+        grid-template-columns: repeat(auto-fill, 45%);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section_wrap {
+        gap: 80px;
+    }
+
+    /* Profile section */
+    .section_profile_img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profile_img {
+        width: fit-content;
+    }
+
+    .profile_img_wrap {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .section_profile_resume {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    .section_profile_resume p {
+        width: 25px;
+        height: 25px;
+    }
+
+    .section_profile_text span {
+        font-size: 35px;
+        line-height: 60px;
+        gap: 5px;
+    }
+
+    .profile_name {
+        font-size: 55px;
+        line-height: 80px;
+    }
+
+    /* Projects section */
+    .section_projects_wrap {
+        gap: 30px;
+    }
+
+    .projects_project_list {
+        gap: 50px;   
+    }
+
+    .projects_project {
+        margin: 30px 0;
+    }
+
+    .projects_project_title {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .projects_project_links {
+        gap: 15px;
+    }
+
+    .projects_project_links a {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .projects_project_links p {
+        height: 20px;
+    }
+
+    /* Awards section */
+    .awards_award_title {
+        font-size: 30px;
+    }
+
+    .awards_award_desc {
+        font-size: 20px;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .section_wrap {
+        gap: 50px;
+    }
+
+    .section:last-child {
+        padding-bottom: 120px;
+    }
+
+    /* Profile section */
+    .profile_img_wrap {
+        width: 180px;
+        height: 180px;
+    }
+
+    .section_profile_resume p {
+        width: 25px;
+        height: 25px;
+    }
+
+    .section_profile_text {
+        font-size: 22px;
+    }
+
+    .section_profile_text span {
+        font-size: 30px;
+        line-height: 40px;
+        gap: 5px;
+    }
+
+    .profile_name {
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    .profile_links {
+        gap: 20px;
+    }
+
+    /* Projects section */
+    .projects_project_list {
+        gap: 35px;
+    }
+
+    /* Awards section */
+    .awards_award_desc {
+        padding: 0 10px;
+    }
+
+    /* Skills section */
+    .section {
+        padding: 50px 30px;
+    }
+
+    .skills_skill_img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .skills_filter {
+        gap: 10px;
+    }
+
+    .skills_filter li {
+        padding: 5px 0;
+    }
+
+    .skills_filter label  {
+        display: flex;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    /* Profile section */
+    .section_profile {
+        padding: 20px;
+    }
+
+    .section_profile_resume {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .section_profile_resume p {
+        width: 20px;
+        height: 20px;
+    }
+
+    .section_profile_text {
+        font-size: 20px;
+    }
+
+    .section_profile_text span {
+        font-size: 25px;
+        line-height: 30px;
+        gap: 5px;
+    }
+
+    .profile_name {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .profile_links {
+        margin-top: 30px;
+    }
+
+    .profile_links li {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Projects section */
+    .section_projects {
+        margin-top: 10px;
+    }
+}

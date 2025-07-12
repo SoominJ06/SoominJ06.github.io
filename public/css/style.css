@@ -1,0 +1,428 @@
+:root {
+    --projectWidth: 400px
+}
+
+.section_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.section {
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section:last-child {
+    padding-bottom: 200px;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.section_title {
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.hoverable_btn:hover {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.hoverable_btn:hover p {
+    transform: rotate(7deg);
+}
+
+/* ==== Profile Section ==== */
+.section_profile {
+    min-height: calc(100svh - var(--navbarHeight));
+    background: url("../img/main_bg.gif") center / cover repeat ;
+    box-shadow: 0 10px 50px var(--black);
+    justify-content: center;
+    align-items: center;
+}
+
+.section_profile_wrap {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Profile text */
+.section_profile_text {
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile_name,
+.section_profile_text span {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile_name {
+    font-size: 80px;
+    font-weight: 600;
+    color: var(--secondary);
+    text-shadow: 6px 6px 0 #333;
+}
+
+.section_profile_text span {
+    text-shadow: 3px 3px 0 #333;
+    font-size: 50px;
+}
+
+/* Profile text animations */
+#globe {
+    line-height: 1px;
+    animation: rotate 3s linear infinite;
+    text-shadow: none;
+    filter: drop-shadow(0 0 5px rgba(3, 3, 3, 0.3));
+}
+
+@keyframes rotate {
+    to { transform: rotateZ(360deg);}
+}
+
+#role {
+    text-shadow: 3px 3px 0 #333;
+}
+
+#role::after {
+    content: ' |';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Profile links */
+.profile_links {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.profile_links li {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10000px;
+    border: 2px solid var(--white);
+    box-shadow: 5px 5px 0 #333;
+    cursor: pointer;
+}
+
+.profile_links li:last-child {
+    padding: 13px;
+}
+
+.profile_links li:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Profile picture */    
+.profile_img {
+    padding: 20px;
+    background: linear-gradient(45deg, #3366ff, var(--secondary));;
+    border-radius: 10000px;
+    box-shadow: 7px 7px 0 #333;
+}
+
+.profile_img_wrap {
+    width: 280px;
+    height: 280px;
+    border-radius: 10000px;
+    overflow: hidden;
+    filter: brightness(0.85);
+}
+
+.profile_img_wrap img {
+    object-position: top;
+    object-fit: cover;
+}
+
+/* Profile resume */
+.section_profile_resume {
+    margin-top: 40px;
+    padding: 15px 40px;
+    border: 2px solid var(--white);
+    border-radius: 1000px;
+    box-shadow: 6px 6px 0 #333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.section_profile_resume a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.section_profile_resume:hover {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.section_profile_resume:hover p {
+    transform: rotate(7deg);
+}
+
+.section_profile_resume p {
+    width: 35px;
+    height: 35px;
+}
+
+
+/* ==== Filter ==== */
+.filter_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filter_wrap li {
+    padding: 8px 0;
+}
+
+.filter_wrap label {
+    padding: 10px 30px;
+    border: 2px solid var(--white);
+    border-radius: 10000px;
+}
+
+.filter_wrap input:checked~label {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    color: var(--black);
+}
+
+.filter_wrap label:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+
+/* ==== Project section ==== */
+.section_projects {
+    margin-top: 60px;
+    gap: 20px;
+}
+
+.section_projects_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Projects list */
+.projects_project_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.projects_project {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/* Project detail */
+.projects_project_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.projects_project_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projects_project_title {
+    text-align: center;
+    font-size: 40px;
+    line-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.projects_project_img {
+    float: left;
+    height: 225px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 0 var(--black);
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.projects_project_desc {
+    display: none;
+}
+
+.projects_project_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.projects_project_links a {
+    padding: 10px 30px;
+    border: 2px solid var(--white);
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.projects_project_links p {
+    height: 30px;
+}
+
+
+/* ==== Awards & Licenses === */
+.section_awards {
+    gap: 40px;
+}
+
+.awards_award_list {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.awards_award_list li {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.awards_award_title {
+    font-size: 30px;
+}
+
+.awards_award_details {
+    color: #999;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.awards_award_img {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+.awards_award_desc {
+    padding: 15px 0;
+    max-width: 800px;
+    font-size: 22px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.awards_award_links {
+    display: flex;
+    align-items: center;
+}
+
+.awards_award_links li {
+    padding: 10px 40px;
+    border: 2px solid var(--white);
+    border-radius: 1000px;
+}
+
+.awards_award_links a {
+    display: flex;
+    gap: 10px;
+}
+
+.awards_award_links p {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* ==== Skills Section ==== */
+.section_skills {
+    gap: 20px;
+}
+
+.skills_skill_list {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 145px);
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.skills_skill_list li {
+    background-color: var(--black);
+    border-radius: 10px;
+}
+
+.skills_skill_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.skills_skill_img {
+    width: 85px;
+    height: 85px;
+}
+
+.skills_skill_title {
+    max-width: 100px;
+    text-align: center;
+    font-size: 23px;
+    line-height: 27px;
+    font-weight: 500;
+    text-shadow: 2.5px 2.5px 0 var(--black);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 98;
+}
+
+.skills_skill_list li:hover .skills_skill_title {
+    opacity: 100;
+}
+
+.skills_skill_list li:hover .skills_skill_img {
+    filter: brightness(0.25);
+    transform: scale(0.9) rotate(5deg);
+}

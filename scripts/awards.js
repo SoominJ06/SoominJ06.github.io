@@ -1,8 +1,7 @@
 function resizeAwardTitle() {
-    if (document.body.clientWidth <= 800) {
+    if (document.body.clientWidth >= 800) {
         return;
-    } 
-    
+    }
     if (!document.body.clientWidth <= 700) {
         return;
     }

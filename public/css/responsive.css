@@ -259,6 +259,11 @@
         color: var(--white);
         opacity: 100;
     }
+
+    .skills_skill_list li:hover .skills_skill_img {
+        filter: none;
+        transform: scale(0.9) rotate(5deg);
+    }
 }
 
 @media screen and (max-width: 600px) {

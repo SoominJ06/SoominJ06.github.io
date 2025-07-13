@@ -19,6 +19,16 @@ function typeRole() {
     }
 }
 
+// Close the mobile navbar menu when a link is clicked
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        const toggle = document.getElementById('navbar_mobile_toggle');
+        if (toggle.checked) {
+            toggle.checked = false;
+        }
+    });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     typeRole();
 });

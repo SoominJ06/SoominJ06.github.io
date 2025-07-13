@@ -21,22 +21,41 @@
 
 .title {
     font-size: 70px;
+    line-height: 80px;
 }
 
 .section_title {
     color: var(--primary);
     text-transform: uppercase;
     font-weight: 700;
+    text-shadow: 6px 6px 0 #444;
 }
 
-.hoverable_btn:hover {
+.hoverable {
+    cursor: pointer;
+}
+
+.hoverable:hover {
     background-color: var(--primary);
-    border: 2px solid var(--primary);
+    /* border: 2px solid var(--primary); */
 }
 
-.hoverable_btn:hover p {
+.hoverable_btn_tilt:hover p {
     transform: rotate(7deg);
 }
+
+.hoverable_btn_move:hover p {
+    transform: translateX(5px);
+}
+
+.hoverable_btn_rotate:hover p {
+    transform: rotateY(180deg);
+}
+
+.hoverable_btn_scaledown:hover p {
+    transform: scale(0.8);
+}
+
 
 /* ==== Profile Section ==== */
 .section_profile {
@@ -133,6 +152,7 @@
 
 .profile_links li:hover {
     transform: scale(1.1) rotate(5deg);
+    background-color: var(--primary);
 }
 
 /* Profile picture */    
@@ -176,7 +196,6 @@
 
 .section_profile_resume:hover {
     background-color: var(--primary);
-    border: 2px solid var(--primary);
 }
 
 .section_profile_resume:hover p {
@@ -204,6 +223,8 @@
     padding: 10px 30px;
     border: 2px solid var(--white);
     border-radius: 10000px;
+    box-shadow: 5px 5px 0 #444;
+    cursor: pointer;
 }
 
 .filter_wrap input:checked~label {
@@ -232,7 +253,8 @@
 /* Projects list */
 .projects_project_list {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, calc(33% - 40px));
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
@@ -264,6 +286,7 @@
 
 .projects_project_title {
     text-align: center;
+    text-shadow: 3px 3px 0 #444;
     font-size: 40px;
     line-height: 45px;
     display: flex;
@@ -275,9 +298,14 @@
     float: left;
     height: 225px;
     border-radius: 10px;
-    box-shadow: 8px 8px 0 var(--black);
+    box-shadow: 8px 8px 0 #444;
     background-color: var(--white);
     overflow: hidden;
+    cursor: pointer;
+}
+
+.projects_project_img:hover img {
+    transform: scale(1.03);
 }
 
 .projects_project_desc {
@@ -296,6 +324,7 @@
     padding: 10px 30px;
     border: 2px solid var(--white);
     border-radius: 1000px;
+    box-shadow: 5px 5px 0 #444;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -327,6 +356,7 @@
 .awards_award_title {
     font-size: 30px;
     font-weight: 600;
+    text-shadow: 2.5px 2.5px 0 #444;
 }
 
 .awards_award_details {
@@ -337,9 +367,10 @@
 }
 
 .awards_award_img {
-    border-radius: 10px;
-    overflow: hidden;
     max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 0 #444;
+    overflow: hidden;
 }
 
 .awards_award_desc {
@@ -361,6 +392,7 @@
     padding: 10px 40px;
     border: 2px solid var(--white);
     border-radius: 1000px;
+    box-shadow: 5px 5px 0 #444;
 }
 
 .awards_award_links a {
@@ -387,7 +419,7 @@
     gap: 30px;
 }
 
-.skills_skill_list li {
+.skills_skill {
     background-color: var(--black);
     border-radius: 10px;
 }

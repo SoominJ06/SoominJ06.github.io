@@ -1,5 +1,6 @@
 @media screen and (max-width: 1500px) {
     .projects_project_list {
+        grid-template-columns: repeat(3, calc(33% - 20px));
         gap: 20px;
     }
     
@@ -85,6 +86,11 @@
     /* Project section */
     .section_projects {
         margin-top: 20px;
+    }
+
+    .projects_project_list {
+        grid-template-columns: repeat(2, calc(50% - 15px));
+        gap: 15px;
     }
 
     /* Awards section */
@@ -179,16 +185,21 @@
 
     /* Project section */
     .section_projects_wrap {
-        gap: 50px;
+        gap: 60px;
     }
 
     .projects_project_list {
+        grid-template-columns: repeat(1, 100%);
         gap: 100px;
+    }
+
+    .projects_project {
+        gap: 25px;
     }
 
     .projects_project_title {
         font-size: 50px;
-        line-height: 55px;
+        line-height: 60px;
     }
 
     .projects_project_links {
@@ -259,9 +270,18 @@
         gap: 40px;
     }
 
+    .section_title {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
     /* Projects section */
     .section_projects {
         margin-top: 30px;
+    }
+
+    .projects_project {
+        gap: 20px;
     }
 
     /* Skills section */
@@ -274,6 +294,11 @@
 @media screen and (max-width: 500px) {
     .section_wrap {
         gap: 80px;
+    }
+
+    .section_title {
+        font-size: 50px;
+        line-height: 60px;
     }
 
     /* Profile section */
@@ -430,6 +455,11 @@
 }
 
 @media screen and (max-width: 350px) {
+    .section_title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
     /* Profile section */
     .section_profile {
         padding: 20px;
@@ -472,5 +502,21 @@
     /* Projects section */
     .section_projects {
         margin-top: 10px;
+    }
+    
+    .projects_project_links {
+        gap: 10px;
+    }
+
+    .projects_project_links a {
+        padding: 7px 18px;
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    /* Awards section */
+    .awards_award_title {
+        font-size: 25px;
+        line-height: 30px;
     }
 }

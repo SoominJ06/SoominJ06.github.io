@@ -1,5 +1,9 @@
 function resizeAwardTitle() {
-    if (document.body.clientWidth <= 700) {
+    if (document.body.clientWidth <= 800) {
+        return;
+    } 
+    
+    if (!document.body.clientWidth <= 700) {
         return;
     }
     // calculate maximum height

@@ -22,19 +22,22 @@ function createProjectHTML(project) {
 
     // Inserting associated links
     for (const [label, url] of Object.entries(project.links)) {
-        // Replacing link and icon
+        // Replacing link, icon and hover animation
+        let linkHover = "hoverable_btn_tilt";
         let linkLabel = label.toLowerCase();
         let linkIcon = "icon_github_white.png";
         if (linkLabel.includes("host")) {
             linkIcon = "icon_cursor_white.png";
+            linkHover = "hoverable_btn_scaledown";
         } else if (linkLabel.includes("presentation") || linkLabel.includes("demo")) {
             linkIcon = "icon_play_white.png";
+            linkHover = "hoverable_btn_move"
         }
 
         // Adding links to project item
         linksHTML += `
             <li>
-                <a class="hoverable_btn" href="${url}" target="_blank" rel="noopener noreferrer">
+                <a class="${linkHover} hoverable" href="${url}" target="_blank" rel="noopener noreferrer">
                     ${label}
                     <p><img src="public/icons/${linkIcon}"></p>
                 </a>
@@ -61,6 +64,7 @@ function loadProjects(filteredProjects = projects) {
     // Append filtered project
     filteredProjects.forEach((project) => {
         const projectElement = document.createElement("li");
+        projectElement.id = `projects_project_${project.name.replaceAll(" ", "_")}`;
         projectElement.classList.add("projects_project");
         projectElement.innerHTML = createProjectHTML(project);
         projectsElement.appendChild(projectElement);

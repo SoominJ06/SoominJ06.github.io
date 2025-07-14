@@ -48,7 +48,7 @@ const projects = [
         links: {
             "GitHub (Java)": "https://github.com/Catherine-Queenan/CS-QuizGame",
             "GitHub (C#)": "https://github.com/Catherine-Queenan/CSharp-QuizApp",
-            "Demo": "https://www.youtube.com/watch?v=kdsx-pLwZOk",
+            "Demo Video": "https://www.youtube.com/watch?v=kdsx-pLwZOk",
         },
     },
     {
@@ -64,7 +64,7 @@ const projects = [
         ],
         links: {
             "GitHub": "https://github.com/SoominJ06/MiniColorApp",
-            "Demo": "https://www.youtube.com/watch?v=0PGM2kqvLGc",
+            "Demo Video": "https://www.youtube.com/watch?v=0PGM2kqvLGc",
         },
     },
     {
@@ -80,7 +80,7 @@ const projects = [
         links: {
             "GitHub": "https://github.com/Danton1/2800-202410-BBY34",
             "Hosted App": "https://medikate.onrender.com/",
-            "Presentation": "https://www.youtube.com/watch?v=a7meY5J1eRI",
+            "Presentation Video": "https://www.youtube.com/watch?v=a7meY5J1eRI",
         },
     },
     {
@@ -128,7 +128,7 @@ const projects = [
         ],
         links: {
             "GitHub": "https://github.com/Danton1/QDS_Hackathon",
-            "Presentation": "https://www.youtube.com/watch?v=bsdUDgsTdGc",
+            "Presentation Video": "https://www.youtube.com/watch?v=bsdUDgsTdGc",
         },
     },
     {
@@ -144,7 +144,7 @@ const projects = [
         ],
         links: {
             "GitHub": "https://github.com/SoominJ06/GameOfLife",
-            "Demo": "https://www.youtube.com/watch?v=fq5rLVJpRfI",
+            "Demo Video": "https://www.youtube.com/watch?v=fq5rLVJpRfI",
         },
     },
     {
@@ -163,7 +163,7 @@ const projects = [
         links: {
             "GitHub": "https://github.com/Kietkiet1109/1800_202330_BBY21",
             "Hosted App": "https://bby21-e4ba0.web.app/",
-            "Presentation": "https://www.youtube.com/watch?v=_WPjxkhmzm4",
+            "Presentation Video": "https://www.youtube.com/watch?v=_WPjxkhmzm4",
         },
     },
     {
@@ -177,7 +177,7 @@ const projects = [
         ],
         links: {
             "GitHub": "https://github.com/SoominJ06/TimHortons",
-            "Demo": "https://www.youtube.com/watch?v=BFOW7fU8lSU",
+            "Demo Video": "https://www.youtube.com/watch?v=BFOW7fU8lSU",
         },
     },
     {

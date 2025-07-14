@@ -7,9 +7,6 @@ const projectDetailTemplate = `
         </div>
     </a>
     <div class="projects_project_text">
-        <div class="projects_project_desc">
-            %PROJECT_DESC%
-        </div>
         <div class="projects_learn_more font_title">
             <a class="hoverable_btn_move hoverable" href="/project_details.html?name=%PROJECT_NAME%">
                 Learn More
@@ -27,7 +24,6 @@ function createProjectHTML(project) {
     return projectDetailTemplate
         .replaceAll("%PROJECT_NAME%", project.name)
         .replace("%PROJECT_IMG%", project.imgUrl)
-        .replace("%PROJECT_DESC%", project.description)
 }
 
 function loadProjects(filteredProjects = projects) {

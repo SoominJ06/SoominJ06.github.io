@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soomin Jeong | %PROJECT_NAME%</title>
+    <base href="https://soominj06.github.io/">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/project_details.css">
+    <!-- Data -->
+    <script src="/data/projects.js"></script>
+    <script src="/data/skills.js"></script>
+    <!-- Favicon -->
+    <link href="/public/icons/favicon.png" rel="icon" type="image/x-icon">
+</head>
+<body>
+
+    <div class="wrap">
+        <!-- Navbar -->
+        <header id="navbar"></header>
+
+        <!-- Project details -->
+        <div id="project_detail_container" class="project_details_wrap">
+            <div id="project_title" class="project_title font_title"></div>
+
+            <div class="project_img_wrap">
+                <img id="project_image" />
+            </div>
+            
+            <div class="project_desc_wrap">
+                <div id="project_description" class="project_description"></div>
+
+                <div class="project_links_wrap">
+                    <div class="section_title font_title">Links</div>
+                    <ul id="project_links" class="project_links"></ul>
+                </div>
+
+                <div class="project_tasks_wrap section_with_title">
+                    <div class="section_title font_title">My Contributions</div>
+                    <ul id="project_tasks" class="project_tasks"></ul>
+                </div>
+
+                <div class="project_skills_wrap section_with_title">
+                    <div class="section_title font_title">Related Skills</div>
+                    <ul id="project_skills" class="project_skills"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer"></footer>
+    </div>
+
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/project_details.js"></script>
+
+</body>
+</html>

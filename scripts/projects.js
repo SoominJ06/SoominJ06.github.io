@@ -1,16 +1,21 @@
 const projectDetailTemplate = `
 <div class="projects_project_title font_title">%PROJECT_NAME%</div>
 <div class="projects_project_details">
-    <div class="projects_project_img">
-        <img src="public/img/projects/%PROJECT_IMG%" alt="%PROJECT_NAME%">
-    </div>
+    <a href="/project_details.html?name=%PROJECT_NAME%">
+        <div class="projects_project_img">
+            <img src="/public/img/projects/%PROJECT_IMG%" alt="%PROJECT_NAME%">
+        </div>
+    </a>
     <div class="projects_project_text">
         <div class="projects_project_desc">
             %PROJECT_DESC%
         </div>
-        <ul class="projects_project_links font_title">
-            %PROJECT_LINKS%
-        </ul>
+        <div class="projects_learn_more font_title">
+            <a class="hoverable_btn_move hoverable" href="/project_details.html?name=%PROJECT_NAME%">
+                Learn More
+                <p><img src="/public/icons/icon_double_arrow_right_white.png"></p>
+            </a>
+        </div>
     </div>
 </div>
 `;
@@ -18,38 +23,11 @@ const projectDetailTemplate = `
 const projectsElement = document.getElementById("projects_project_list");
 
 function createProjectHTML(project) {
-    let linksHTML = "";
-
-    // Inserting associated links
-    for (const [label, url] of Object.entries(project.links)) {
-        // Replacing link, icon and hover animation
-        let linkHover = "hoverable_btn_tilt";
-        let linkLabel = label.toLowerCase();
-        let linkIcon = "icon_github_white.png";
-        if (linkLabel.includes("host")) {
-            linkIcon = "icon_cursor_white.png";
-            linkHover = "hoverable_btn_scaledown";
-        } else if (linkLabel.includes("presentation") || linkLabel.includes("demo")) {
-            linkIcon = "icon_play_white.png";
-            linkHover = "hoverable_btn_move"
-        }
-
-        // Adding links to project item
-        linksHTML += `
-            <li>
-                <a class="${linkHover} hoverable" href="${url}" target="_blank" rel="noopener noreferrer">
-                    ${label}
-                    <p><img src="public/icons/${linkIcon}"></p>
-                </a>
-            </li>`;
-    }
-
     // Replace project details and return
     return projectDetailTemplate
         .replaceAll("%PROJECT_NAME%", project.name)
         .replace("%PROJECT_IMG%", project.imgUrl)
         .replace("%PROJECT_DESC%", project.description)
-        .replace("%PROJECT_LINKS%", linksHTML);
 }
 
 function loadProjects(filteredProjects = projects) {

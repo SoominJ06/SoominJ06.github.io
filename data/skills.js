@@ -139,6 +139,11 @@ const skills = [
         category: ["Server", "Web"],
     },
     {
+        name: "Jakarta",
+        imgUrl: "jakarta.png",
+        category: ["Server", "APIs", "Web"],
+    },
+    {
         name: "Mongo DB",
         imgUrl: "mongoDB.webp",
         category: ["Database"],

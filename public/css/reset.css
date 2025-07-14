@@ -85,6 +85,31 @@ body { font-family: "Hind Guntur", sans-serif; color: var(--white); background-c
     border: 2px solid var(--primary);
 }
 
+.hoverable {
+    cursor: pointer;
+}
+
+.hoverable:hover {
+    background-color: var(--primary);
+    /* border: 2px solid var(--primary); */
+}
+
+.hoverable_btn_tilt:hover p {
+    transform: rotate(7deg);
+}
+
+.hoverable_btn_move:hover p {
+    transform: translateX(5px);
+}
+
+.hoverable_btn_rotate:hover p {
+    transform: rotateY(180deg);
+}
+
+.hoverable_btn_scaledown:hover p {
+    transform: scale(0.8);
+}
+
 /* ===== Navbar ===== */
 .navbar {
     width: 100%;

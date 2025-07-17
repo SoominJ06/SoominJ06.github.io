@@ -142,6 +142,14 @@ function initializeProjects() {
     loadProjects();
     loadProjectsFilters();
     resizeProject(document.body.clientWidth);
+
+    // Checking light mode again to load black icons
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+        enableLightMode();
+        lightIcon.style.display = "inline";
+        darkIcon.style.display = "none";
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

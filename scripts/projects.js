@@ -3,14 +3,14 @@ const projectDetailTemplate = `
 <div class="projects_project_details">
     <a href="/project_details.html?name=%PROJECT_NAME%">
         <div class="projects_project_img">
-            <img src="/public/img/projects/%PROJECT_IMG%" alt="%PROJECT_NAME%">
+            <img src="public/img/projects/%PROJECT_IMG%" alt="%PROJECT_NAME%">
         </div>
     </a>
     <div class="projects_project_text">
         <div class="projects_learn_more font_title">
             <a class="hoverable_btn_move hoverable" href="/project_details.html?name=%PROJECT_NAME%">
                 Learn More
-                <p><img src="/public/icons/icon_double_arrow_right_white.png"></p>
+                <p><img class="themed-icon" src="public/icons/icon_double_arrow_right_white.png" data-icon="double_arrow_right" alt="Learn more icon"></p>
             </a>
         </div>
     </div>

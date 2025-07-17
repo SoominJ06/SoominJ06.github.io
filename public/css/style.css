@@ -347,6 +347,10 @@
     gap: 50px;
 }
 
+.light-mode .awards_award_details {
+    color: #444;
+}
+
 .awards_award_img {
     max-width: 400px;
     border-radius: 10px;

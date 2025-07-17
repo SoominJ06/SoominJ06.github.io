@@ -56,9 +56,9 @@ const footerTemplate = `
 
         <div class="footer_con">
             <ul class="footer_socialMedia">
-                <li class="footer_icons"><a href="mailto:sjeong0643@gmail.com"><img src="/public/icons/icon_email_white.png" alt="Email Icon"></a></li>
-                <li class="footer_icons"><a href="https://github.com/SoominJ06" target="_blank"><img src="/public/icons/icon_github_white.png" alt="GitHub Icon"></a></li>
-                <li class="footer_icons"><a href="https://www.linkedin.com/in/jeong-soomin/" target="_blank"><img src="/public/icons/icon_linkedin_white.png" alt="LinkedIn Icon"></a></li>
+                <li class="footer_icons"><a href="mailto:sjeong0643@gmail.com"><img class="themed-icon" src="public/icons/icon_email_white.png" data-icon="email" alt="Email Icon"></a></li>
+                <li class="footer_icons"><a href="https://github.com/SoominJ06" target="_blank"><img class="themed-icon" src="public/icons/icon_github_white.png" data-icon="github" alt="GitHub Icon"></a></li>
+                <li class="footer_icons"><a href="https://www.linkedin.com/in/jeong-soomin/" target="_blank"><img class="themed-icon" src="public/icons/icon_linkedin_white.png" data-icon="linkedin" alt="LinkedIn Icon"></a></li>
             </ul>
         </div>
     </div>
@@ -92,12 +92,23 @@ function lightDarkToggle() {
     });
 }
 
+function updateThemedIcons(isLightMode) {
+    const icons = document.querySelectorAll('.themed-icon');
+    const color = isLightMode ? 'black' : 'white';
+
+    icons.forEach(icon => {
+        const iconName = icon.dataset.icon;
+        icon.src = `public/icons/icon_${iconName}_${color}.png`;
+    });
+}
+
 function enableDarkMode() {
     document.body.classList.remove("light-mode");
     document.documentElement.style.setProperty('--white', '#eee');
     document.documentElement.style.setProperty('--dark', '#1e1e22');
     document.documentElement.style.setProperty('--dark-shadow', '#444');
     document.documentElement.style.setProperty('--black', '#030303');
+    updateThemedIcons(false);
 }
 
 function enableLightMode() {
@@ -106,7 +117,7 @@ function enableLightMode() {
     document.documentElement.style.setProperty('--dark', '#d1d1d1');
     document.documentElement.style.setProperty('--dark-shadow', '#5d6378');
     document.documentElement.style.setProperty('--black', '#eee');
-    
+    updateThemedIcons(true);
 }
 
 function initLayout() {

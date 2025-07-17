@@ -2,7 +2,7 @@ const skillItemTemplate = `
 <li class="project_details_skill_item">
     <div class="project_details_skill">
         <div class="project_skill_img">
-            <img src="/public/icons/skills/%SKILL_IMG%" alt="%SKILL_NAME%">
+            <img src="public/icons/skills/%SKILL_IMG%" alt="%SKILL_NAME%">
         </div>
         <div class="project_skill_title font_title">%SKILL_NAME%</div>
     </div>
@@ -47,12 +47,12 @@ if (!projectName) {
             // Replacing link, icon and hover animation
             let linkHover = "hoverable_btn_tilt";
             let linkLabel = label.toLowerCase();
-            let linkIcon = "icon_github_white.png";
+            let linkIcon = "github";
             if (linkLabel.includes("host")) {
-                linkIcon = "icon_cursor_white.png";
+                linkIcon = "cursor";
                 linkHover = "hoverable_btn_scaledown";
             } else if (linkLabel.includes("presentation") || linkLabel.includes("demo")) {
-                linkIcon = "icon_play_white.png";
+                linkIcon = "play";
                 linkHover = "hoverable_btn_move"
             }
 
@@ -61,7 +61,7 @@ if (!projectName) {
             <li class="font_title">
                 <a class="${linkHover} hoverable" href="${project.links[label]}" target="_blank">
                     ${label}
-                    <p><img src="/public/icons/${linkIcon}"></p>
+                    <p><img class="themed-icon" src="public/icons/icon_${linkIcon}_white.png" data-icon="${linkIcon}"></p>
                 </a>
             </li>`;
         }

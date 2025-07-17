@@ -278,6 +278,10 @@ body { font-family: "Hind Guntur", sans-serif; color: var(--white); background-c
     cursor: pointer;
 }
 
+.light-mode .navbar_toggle_icon {
+    background: url(../icons/icon_menu_black.png) center / cover no-repeat;
+}
+
 /* ===== Footer ===== */
 .footer {
     height: var(--footerHeight);
@@ -484,6 +488,10 @@ body { font-family: "Hind Guntur", sans-serif; color: var(--white); background-c
 
     .navbar:has(#navbar_mobile_toggle:checked) .navbar_toggle_icon {
         background: url(../icons/icon_close_white.png) center / cover no-repeat;
+    }
+
+    .light-mode .navbar:has(#navbar_mobile_toggle:checked) .navbar_toggle_icon {
+        background: url(../icons/icon_close_black.png) center / cover no-repeat;
     }
 }
 

@@ -235,7 +235,7 @@ const skills = [
     },
     {
         name: "Unreal Engine",
-        imgUrl: "unreal.png",
+        imgUrl: "unreal.webp",
         category: ["Game", "IDEs"],
     },
     {

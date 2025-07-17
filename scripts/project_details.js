@@ -22,6 +22,10 @@ if (!projectName) {
     if (!project) {
         window.location.href = "/404.html"; // or show error
     } else {
+        // Update title
+        document.title.replace("%PROJECT_NAME%", project.name);
+
+        // Insert project name, image and description
         document.getElementById("project_title").innerHTML = project.name;
         document.getElementById("project_image").src = `/public/img/projects/${project.imgUrl}`;
         document.getElementById("project_description").textContent = project.description;

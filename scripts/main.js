@@ -1,6 +1,10 @@
 const navbarTemplate = `
 <header class="navbar font_title">
     <div class="logo">
+        <div id="light_dark_toggle" class="light_dark_toggle">
+            <p id="darkmode_icon" class="darkmode_icon"></p>
+            <p id="lightmode_icon" class="lightmode_icon" style="display:none"></p>
+        </div>
         <a href="/">
             Soomin Jeong
         </a>
@@ -61,6 +65,50 @@ const footerTemplate = `
 </footer>
 `;
 
+function lightDarkToggle() {
+    const lightDarkToggle = document.getElementById("light_dark_toggle");
+    const lightIcon = document.getElementById("lightmode_icon");
+    const darkIcon = document.getElementById("darkmode_icon");
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+        enableLightMode();
+        lightIcon.style.display = "inline";
+        darkIcon.style.display = "none";
+    }
+
+    lightDarkToggle.addEventListener("click", () => {
+        if (document.body.classList.contains("light-mode")) {
+            enableDarkMode();
+            localStorage.setItem("theme", "dark");
+            lightIcon.style.display = "none";
+            darkIcon.style.display = "inline";
+        } else {
+            enableLightMode();
+            localStorage.setItem("theme", "light");
+            lightIcon.style.display = "inline";
+            darkIcon.style.display = "none";
+        }
+    });
+}
+
+function enableDarkMode() {
+    document.body.classList.remove("light-mode");
+    document.documentElement.style.setProperty('--white', '#eee');
+    document.documentElement.style.setProperty('--dark', '#1e1e22');
+    document.documentElement.style.setProperty('--dark-shadow', '#444');
+    document.documentElement.style.setProperty('--black', '#030303');
+}
+
+function enableLightMode() {
+    document.body.classList.add("light-mode");
+    document.documentElement.style.setProperty('--white', '#030303');
+    document.documentElement.style.setProperty('--dark', '#d1d1d1');
+    document.documentElement.style.setProperty('--dark-shadow', '#5d6378');
+    document.documentElement.style.setProperty('--black', '#eee');
+    
+}
+
 function initLayout() {
     document.getElementById("navbar").outerHTML = navbarTemplate;
     document.getElementById("footer").outerHTML = footerTemplate;
@@ -74,6 +122,8 @@ function initLayout() {
             }
         });
     });
+
+    lightDarkToggle();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

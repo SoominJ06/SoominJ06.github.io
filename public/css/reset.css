@@ -9,11 +9,12 @@ ul { list-style: none; }
 img { width: 100%; height: 100%; border: 0; display: block; object-fit: contain; }
 body { font-family: "Hind Guntur", sans-serif; color: var(--white); background-color: var(--dark); }
 
-
 /* ========== Variable settings ========== */
 :root {
     --black: #030303;
     --dark: #1e1e22;
+    /* --dark-shadow: #5d6378; */
+    --dark-shadow: #444;
     --white: #eee;
     --primary: #5081EA;
     --secondary: #DBFE87;
@@ -62,6 +63,7 @@ body { font-family: "Hind Guntur", sans-serif; color: var(--white); background-c
 }
 
 .error_message {
+    width: 70vw;
     color: #888;
     font-size: 30px;
     display: flex;
@@ -124,6 +126,10 @@ body { font-family: "Hind Guntur", sans-serif; color: var(--white); background-c
     z-index: 99;
 }
 
+.light-mode .navbar {
+    background-color: rgba(238, 238, 238, 0.5);
+}
+
 .navbar:hover {
     background-color: var(--black);
 }
@@ -132,9 +138,46 @@ body { font-family: "Hind Guntur", sans-serif; color: var(--white); background-c
     font-size: 25px;
     position: absolute;
     left: var(--navbarPadding);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.logo:hover a {
+/* Light/Dark mode */
+.light_dark_toggle {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.light_dark_toggle p {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.darkmode_icon {
+    background-image: url(../icons/icon_darkmode_white.png);
+}
+
+.darkmode_icon:hover {
+    background-image: url(../icons/icon_darkmode_blue.png);
+}
+
+.lightmode_icon {
+    background-image: url(../icons/icon_lightmode_black.png);
+}
+
+.lightmode_icon:hover {
+    background-image: url(../icons/icon_lightmode_blue.png);
+}
+
+.logo a:hover {
     color: var(--primary);
 }
 
@@ -169,8 +212,16 @@ body { font-family: "Hind Guntur", sans-serif; color: var(--white); background-c
     z-index: 9;
 }
 
+.light-mode .navbar_border {
+    background-color: var(--primary);
+}
+
 .navbar_top_element:hover a {
     color: var(--secondary);
+}
+
+.light-mode .navbar_top_element:hover a {
+    color: var(--primary);
 }
 
 .navbar_top_element:hover .navbar_border {
@@ -193,6 +244,11 @@ body { font-family: "Hind Guntur", sans-serif; color: var(--white); background-c
     padding: 10px 30px;
     text-align: center;
     cursor: pointer;
+}
+
+.light-mode .navbar_side_element:hover {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 .navbar_side_element:hover {
@@ -237,7 +293,7 @@ body { font-family: "Hind Guntur", sans-serif; color: var(--white); background-c
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #eee;
+    color: var(--white);
 }
 
 .footer_con {

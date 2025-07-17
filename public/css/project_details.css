@@ -94,7 +94,7 @@
     font-size: 23px;
     line-height: 27px;
     font-weight: 500;
-    text-shadow: 2.5px 2.5px 0 var(--black);
+    text-shadow: 2.5px 2.5px 0 var(--dark-shadow);
     opacity: 0;
     display: flex;
     justify-content: center;

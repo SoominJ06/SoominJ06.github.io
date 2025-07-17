@@ -3,6 +3,7 @@
 }
 
 .section_wrap {
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -34,11 +35,16 @@
 
 /* ==== Profile Section ==== */
 .section_profile {
-    min-height: calc(100svh - var(--navbarHeight));
+    /* min-height: calc(100svh - var(--navbarHeight)); */
+    min-height: 100vh;
     background: url("../img/main_bg.gif") center / cover repeat ;
     box-shadow: 0 10px 50px var(--black);
     justify-content: center;
     align-items: center;
+}
+
+.light-mode .section_profile {
+    background: url("../img/main_bg_light.gif") center / cover repeat ;
 }
 
 .section_profile_wrap {
@@ -68,11 +74,11 @@
     font-size: 80px;
     font-weight: 600;
     color: var(--secondary);
-    text-shadow: 6px 6px 0 #333;
+    text-shadow: 6px 6px 0 var(--dark-shadow);
 }
 
 .section_profile_text span {
-    text-shadow: 3px 3px 0 #333;
+    text-shadow: 3px 3px 0 var(--dark-shadow);
     font-size: 50px;
 }
 
@@ -89,7 +95,7 @@
 }
 
 #role {
-    text-shadow: 3px 3px 0 #333;
+    text-shadow: 3px 3px 0 var(--dark-shadow);
 }
 
 #role::after {
@@ -117,7 +123,7 @@
     padding: 10px;
     border-radius: 10000px;
     border: 2px solid var(--white);
-    box-shadow: 5px 5px 0 #333;
+    box-shadow: 5px 5px 0 var(--dark-shadow);
     cursor: pointer;
 }
 
@@ -135,7 +141,7 @@
     padding: 20px;
     background: linear-gradient(45deg, #3366ff, var(--secondary));;
     border-radius: 10000px;
-    box-shadow: 7px 7px 0 #333;
+    box-shadow: 7px 7px 0 var(--dark-shadow);
 }
 
 .profile_img_wrap {
@@ -157,7 +163,7 @@
     padding: 15px 40px;
     border: 2px solid var(--white);
     border-radius: 1000px;
-    box-shadow: 6px 6px 0 #333;
+    box-shadow: 6px 6px 0 var(--dark-shadow);
     font-size: 20px;
     cursor: pointer;
 }
@@ -261,7 +267,7 @@
 
 .projects_project_title {
     text-align: center;
-    text-shadow: 3px 3px 0 #444;
+    text-shadow: 3px 3px 0 var(--dark-shadow);
     font-size: 40px;
     line-height: 45px;
     display: flex;
@@ -331,7 +337,7 @@
 .awards_award_title {
     font-size: 30px;
     font-weight: 600;
-    text-shadow: 2.5px 2.5px 0 #444;
+    text-shadow: 2.5px 2.5px 0 var(--dark-shadow);
 }
 
 .awards_award_details {
@@ -427,6 +433,10 @@
     z-index: 98;
 }
 
+.light-mode .skills_skill_title {
+    text-shadow: 2.5px 2.5px 0 var(--dark-shadow);
+}
+
 .skills_skill_list li:hover .skills_skill_title {
     opacity: 100;
 }
@@ -434,4 +444,8 @@
 .skills_skill_list li:hover .skills_skill_img {
     filter: brightness(0.25);
     transform: scale(0.9) rotate(5deg);
+}
+
+.light-mode .skills_skill_list li:hover .skills_skill_img {
+    filter: opacity(0.5);
 }

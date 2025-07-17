@@ -112,7 +112,7 @@
     transform: scale(0.9) rotate(5deg);
 }
 
-.light-mode .project_details_skill_item li:hover .project_skill_img {
+.light-mode .project_details_skill_item:hover .project_skill_img {
     filter: opacity(0.5);
 }
 

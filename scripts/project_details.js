@@ -23,7 +23,7 @@ if (!projectName) {
         window.location.href = "/404.html"; // or show error
     } else {
         // Update title
-        document.title.replace("%PROJECT_NAME%", project.name);
+        document.title = `Soomin Jeong | ${project.name}`;
 
         // Insert project name, image and description
         document.getElementById("project_title").innerHTML = project.name;

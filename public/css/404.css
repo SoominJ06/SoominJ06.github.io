@@ -133,7 +133,7 @@
 
     .title {
         font-size: 30px;
-        text-shadow: 2px 2px #444;
+        text-shadow: 2px 2px var(--dark-shadow);
     }
 
     .redirect_wrap {

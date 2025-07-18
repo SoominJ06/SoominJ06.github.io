@@ -33,7 +33,7 @@
     max-width: 600px;
     border-radius: 13px;
     overflow: hidden;
-    box-shadow: 7px 7px #444;
+    box-shadow: 7px 7px var(--dark-shadow);
 }
 
 /* Project description */
@@ -135,7 +135,7 @@
     padding: 10px 30px;
     border: 2px solid var(--white);
     border-radius: 1000px;
-    box-shadow: 5px 5px 0 #444;
+    box-shadow: 5px 5px 0 var(--dark-shadow);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -4,6 +4,21 @@ const projectFilters = [
 
 const projects = [
     {
+        name: "SkyBlue",
+        category: ["Web", "UI/UX"],
+        imgUrl: "skyblue.png",
+        skills: ["HTML", "CSS", "Java Script", "Node.js", "EJS", "JSON", "Figma", "GitHub"],
+        description: "A website for Skublue - a company that provides everything you need, in order to deliver high-performing solar installations efficiently, reliably, and sustainably. Specializing in end-to-end sustainable solar procurement and enablement, Skyblue supplies top-tier solar products and the support needed to streamline procurement from planning to delivery.",
+        tasks: [
+            "Designed and developed all front-end interfaces using HTML, CSS, JavaScript, Node.js and EJS.",
+            "Implemented a fully responsive design to ensure a seamless user experience across devices and screen sizes.",
+            "Collaborated with the back-end developers to integrate a dynamic database using JSON, and Node.js and conducted thorough testing to ensure full functionality and performance across all platforms."
+        ],
+        links: {
+            "Hosted App": "https://www.skyblueproducts.ca/",
+        },
+    },
+    {
         name: "Echo of the North",
         category: ["Web", "UI/UX", "Mobile", "Database"],
         imgUrl: "echoOfTheNorth.png",

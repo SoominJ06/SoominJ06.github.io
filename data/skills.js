@@ -79,6 +79,11 @@ const skills = [
         category: ["IDEs"],
     },
     {
+        name: "PyCharm",
+        imgUrl: "pycharm.png",
+        category: ["IDEs"],
+    },
+    {
         name: "React",
         imgUrl: "react.png",
         category: ["Web"],
@@ -102,6 +107,11 @@ const skills = [
         name: "R",
         imgUrl: "r.png",
         category: ["Programming Languages", "Database"],
+    },
+    {
+        name: "R Studio",
+        imgUrl: "rStudio.svg",
+        category: ["IDEs", "Database"],
     },
     {
         name: "Python",
